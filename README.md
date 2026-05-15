@@ -30,14 +30,32 @@ Os membros do grupo são compostos pelos seguintes servidores da Secretaria de S
 
 ## 🎲 Base de dados
 
-[EDITAR]
+O projeto fundamentou-se na criação de um conjunto de dados especializado chamado health_qa.jsonl, contendo aproximadamente 100 exemplos de perguntas e respostas estruturadas em formato de instrução. Os temas abrangem áreas críticas da saúde da mulher, como:
+- Sinais de alerta na gestação e puerpério
+- Protocolos de conduta em casos de violência doméstica
+- Orientações sobre contracepção, menopausa e saúde mental materna
+- Rastreamento preventivo de câncer de colo do útero e de mama
 
-## 🛠️ Funcionalidades Principais
+Utilizando a técnica LoRA (Low-Rank Adaptation) no modelo base sshleifer/tiny-gpt2, o processo de treinamento gerou os seguintes indicadores técnicos:
 
-- Fine-tuning Especializado: Modelo de linguagem ajustado com diretrizes da FEBRASGO, OMS e protocolos de rastreamento de câncer (INCA)
-- Orquestração de Dados com LangChain: Integração de prontuários, históricos de exames preventivos e bases de medicamentos específicos.
-- Fluxos de Decisão com LangGraph (triagem ginecológica, acompanhamento obsétrico, sistema de prevenção e detecção de violência doméstica).
+Parâmetros Treináveis: Apenas 64 parâmetros foram ajustados, representando cerca de 0,03% do total do modelo, o que permitiu a execução em ambiente de CPU.
+Performance de Treinamento: Após duas épocas, a função de perda (loss) estabilizou em aproximadamente 10,74.
+Nota Técnica: Embora o modelo gerado seja um protótipo de baixa fidelidade semântica devido ao seu tamanho reduzido, ele valida com sucesso o pipeline técnico de especialização para o domínio da saúde.
 
+Foi gerada uma base de conhecimento baseada em protocolos clínicos simplificados, indexada para o sistema de Geração Aumentada por Recuperação (RAG).
+- **Vetorização:** Os documentos foram transformados em vetores numéricos usando o modelo de embedding all-MiniLM-L6-v2.
+- **Indexação:** Utilizou-se a biblioteca FAISS para permitir buscas semânticas ultrarrápidas, recuperando trechos dos protocolos em milissegundos para embasar as respostas da IA.
+
+O sistema de triagem, orquestrado pelo LangGraph, foi submetido a uma bateria de testes com cinco cenários clínicos reais (como suspeita de pré-eclâmpsia e rastreamento atrasado). Os dados de saída revelaram:
+
+- Acurácia na Classificação de Risco: 100% de precisão na distinção entre risco "ALTO" e "BAIXO".
+- Acurácia na Escolha de Conduta: 100% de sucesso na seleção entre encaminhamento urgente ou orientação de rotina.
+- Segurança e Anonimização: O pipeline aplicou com sucesso a detecção e remoção de dados sensíveis (CPFs, e-mails, telefones) via expressões regulares antes do processamento.
+
+Os dados gerados reforçam um modelo de governança clínica onde:
+- Casos de alto risco acionam regras determinísticas e não dependem da geração criativa da LLM, garantindo encaminhamento imediato.
+- Regras de segurança estão codificadas diretamente no prompt para impedir diagnósticos definitivos ou prescrições medicamentosas pelo assistente.
+  
 ## 📒 Relatório técnico
 
 O relatório técnico descreve o desafio proposto e a forma de exploração de dados adotada pelos membros do grupo, explicando as estratégias de pré-processamento e limpeza dos dados, os modelos avaliados e utilizados, os resultados obtidos, a interpretação do dados, além da aplicabilidade prática e as lições aprendidas durante o desenvolvimento da atividade acadêmica.
