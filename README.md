@@ -56,6 +56,6 @@ https://github.com/marceloklotz/breast-cancer-fiap-segunda-fase/blob/main/Relat%
 
 O vídeo explicativo sobre a metologia, resultados e notebook em execução foi disponbilizado a partir do seguinte link:
 
-[FIAP - TECH CHALLENGE (TERCEIRA FASE)](https://i.ytimg.com/vi/4wX8KIxYdJ4/maxresdefault.jpg)
+[[FIAP - TECH CHALLENGE (TERCEIRA FASE)](https://i.ytimg.com/vi/4wX8KIxYdJ4/maxresdefault.jpg)
 
 <p align="center"> https://youtu.be/4wX8KIxYdJ4 </p>
