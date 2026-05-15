@@ -9,10 +9,12 @@ https://github.com/marceloklotz/fiap-terceira-fase/blob/main/FIAP_Fase_3.ipynb
 
 ## 📝 Descrição do Desafio
 
-O objetivo principal é melhorar a precisão e a interpretabilidade dos modelos de diagnóstico desenvolvidos na fase anterior
-. Para isso, implementamos:
-Otimização de Hiperparâmetros: Uso de Algoritmos Genéticos para encontrar a configuração ideal do modelo
-. Interpretabilidade via LLM: Integração com modelos de linguagem para gerar explicações humanizadas sobre os diagnósticos para profissionais de saúde
+A proposta do desafio foi desenvolver um assistente virtual médico personalizado, treinado com dados próprios da instituição, capaz de apoiar condutas clínicas, responder dúvidas de profissionais e sugerir procedimentos alinhados aos protocolos internos de atendimento feminino. O desafio também envolve a criação de fluxos automatizados, seguros e integrados, utilizando LangChain, para coordenar ações como verificação de exames ginecológicos pendentes, recomendação de tratamentos reprodutivos, emissão de alertas para possíveis casos de violência doméstica e articulação de atendimento multidisciplinar, considerando as particularidades e sensibilidades do cuidado à mulher.
+
+Para tanto, utilizou-se o fine-tuning de LLMs com dados específicos da área e implementando fluxos automatizados de decisão clínica através do LangChain, sempre respeitando protocolos de segurança, privacidade e sensibilidade cultural específicos do atendimento feminino, conforme instruções da disciplina da Pós Tech (8IADT) FIAP [(Tech Challenge - Fase 3.pdf)](https://github.com/marceloklotz/fiap-terceira-fase/blob/main/8IADT-Fase3-TechChallenge-Secretaria.pdf).
+
+
+
 
 ## 👥 Integrantes do grupo
 Os membros do grupo são compostos pelos seguintes servidores da Secretaria de Segurança Pública do Distrito Federal (SSP/DF):
