@@ -2,7 +2,7 @@
 
 Este repositório contém o desenvolvimento de um assistente virtual médico especializado em saúde e segurança da mulher. O projeto utiliza técnicas avançadas de Fine-tuning de LLMs e orquestração de fluxos complexos com LangChain e LangGraph para auxiliar profissionais de saúde em condutas clínicas e triagens especializadas.
 
-O sistema foi treinado com dados próprios e protocolos institucionais para oferecer suporte em ginecologia, obstetrícia, saúde mental materna e detecção de violência doméstica, conforme instruções contidas no PDF fornecido [(Tech Challenge - Fase 3.pdf)](https://github.com/marceloklotz/fiap-terceira-fase/blob/main/8IADT-Fase3-TechChallenge-Secretaria.pdf).
+O sistema foi treinado com dados próprios e protocolos institucionais para oferecer suporte em ginecologia, obstetrícia, saúde mental materna e detecção de violência doméstica, conforme instruções contidas no PDF fornecido [PDF](https://github.com/marceloklotz/fiap-terceira-fase/blob/main/8IADT-Fase3-TechChallenge-Secretaria.pdf).
 
 O notebook final do grupo foi incluído em:
 https://github.com/marceloklotz/fiap-terceira-fase/blob/main/FIAP_Fase_3.ipynb
