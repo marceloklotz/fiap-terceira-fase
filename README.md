@@ -1,10 +1,16 @@
 # 🏫👨‍💻 Tech Challenge - Pós Tech (8IADT) FIAP - Fase 3: Assistente virtual de atendimento médico
 
-Este repositório contém o desenvolvimento de um assistente virtual médico especializado em saúde e segurança da mulher. O projeto utiliza técnicas avançadas de Fine-tuning de LLMs e orquestração de fluxos complexos com LangChain e LangGraph para auxiliar profissionais de saúde em condutas clínicas e triagens especializadas.
+Este repositório contém o notebook [FIAP_Fase_3.ipynb](https://github.com/marceloklotz/fiap-terceira-fase/blob/main/FIAP_Fase_3.ipynb) que apresenta o desenvolvimento de um protótipo de assistente virtual voltado para a saúde da mulher, com foco específico em triagem ginecológica e apoio à decisão clínica. O processo foi estruturado para aplicar os conceitos fundamentais da Fase 3 do curso, integrando ajuste fino de modelos, recuperação de informações e orquestração de fluxos complexos, conforme instruções contidas no [PDF](https://github.com/marceloklotz/fiap-terceira-fase/blob/main/8IADT-Fase3-TechChallenge-Secretaria.pdf).
 
-O sistema foi treinado com dados próprios e protocolos institucionais para oferecer suporte em ginecologia, obstetrícia, saúde mental materna e detecção de violência doméstica, conforme instruções contidas no [PDF](https://github.com/marceloklotz/fiap-terceira-fase/blob/main/8IADT-Fase3-TechChallenge-Secretaria.pdf) fornecido.
+O projeto seguiu uma metodologia dividida em etapas técnicas claras: 
+- Preparação do Ambiente: Configuração do Google Colab com a instalação de bibliotecas essenciais como LangChain, LangGraph, Transformers e FAISS.
+- Criação de Dados Sintéticos: Construção de um dataset especializado (health_qa.jsonl) contendo cerca de 100 exemplos de perguntas e respostas sobre temas como gestação, menopausa e violência doméstica para fundamentar o treinamento.
+- Ajuste Fino (Fine-tuning) com LoRA: Utilização da técnica Low-Rank Adaptation (LoRA) para treinar o modelo base sshleifer/tiny-gpt2. Embora o modelo escolhido seja pequeno para permitir a execução em CPU, ele serviu como prova de conceito para o pipeline de treinamento.
+- Implementação de RAG (Retrieval-Augmented Generation): Integração do modelo a uma base de conhecimento de protocolos clínicos usando a biblioteca FAISS para busca vetorial. Isso permite que o assistente recupere informações precisas de documentos antes de gerar uma resposta.
+- Orquestração com LangGraph: Criação de um grafo de estados para gerenciar o fluxo de triagem. O sistema coleta sinais de alerta, avalia o nível de risco (Alto ou Baixo) e decide a conduta médica apropriada (encaminhamento urgente ou orientação de rotina).
+- Avaliação e Testes: Execução de uma bateria de testes automatizados com cenários clínicos reais para validar a lógica de decisão e a acurácia da classificação de risco.
 
-O notebook final do grupo foi incluído em:
+Link do notebook encontra-se disponível em:
 https://github.com/marceloklotz/fiap-terceira-fase/blob/main/FIAP_Fase_3.ipynb
 
 ## 📝 Descrição do Desafio
