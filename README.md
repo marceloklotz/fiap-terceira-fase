@@ -58,4 +58,4 @@ O vídeo explicativo sobre a metologia, resultados e notebook em execução foi 
 
 [![Tech Challenge – Fase 2 | Otimização de Modelos de Diagnóstico com Algoritmos Genéticos e LLMs](https://img.youtube.com/vi/SBfUBlP-d4Q/0.jpg)](https://www.youtube.com/watch?v=SBfUBlP-d4Q)
 
-https://www.youtube.com/watch?v=SBfUBlP-d4Q
+https://youtu.be/4wX8KIxYdJ4
